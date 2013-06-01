@@ -54,6 +54,7 @@
         double xi=[[_data objectAtIndex:i] doubleValue];
         sum+=[kernelDensityEstimation gaussian:-[self norm:x-xi/_bandWidth]];
     }
-    return 1/[_data count]*_bandWidth*sum;
+    
+    return 1/((double)[_data count])*_bandWidth*sum;
 }
 @end

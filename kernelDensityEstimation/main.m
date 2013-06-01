@@ -30,7 +30,7 @@ int main (int argc, const char * argv[])
                       , nil];
         kernelDensityEstimation *de=[[kernelDensityEstimation alloc] initWithData:arr];
         double y=[de porobabilityDensityFunction:1.3];
-        NSLog(@"y^=%f",y);
+        NSLog(@"y^=%lf",y);
         
     }
     return 0;
