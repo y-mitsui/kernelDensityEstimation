@@ -33,7 +33,7 @@
         div[1]=[[data objectAtIndex:i+2] doubleValue]-[[data objectAtIndex:i+1] doubleValue];
         c3+=pow(div[1]-div[0],2);
     }
-    NSLog(@"c1:%f c2:%f c3:%f",c1,c2,c3);
+    NSLog(@"c1:%lf c2:%lf c3:%lf",c1,c2,c3);
     return pow(c1,-2.0/5.0)*pow(c2,1.0/5.0)*pow(c3,-1.0/5.0)/pow([data count],1.0/5.0);
 }
 
@@ -41,7 +41,7 @@
     self=[super init];
     _data=data;
     _bandWidth=[self calcBandWidth:data];
-    NSLog(@"band width: %f",_bandWidth);
+    NSLog(@"band width: %lf",_bandWidth);
     return self;
 }
 -(double)norm:(double)x{
@@ -54,6 +54,6 @@
         double xi=[[_data objectAtIndex:i] doubleValue];
         sum+=[kernelDensityEstimation gaussian:-[self norm:x-xi/_bandWidth]];
     }
-    return 1/_bandWidth*sum;
+    return 1/[_data count]*_bandWidth*sum;
 }
 @end
