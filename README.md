@@ -1,4 +1,4 @@
 kernelDensityEstimation
 =======================
 
-A tiny kernel density estimation of variable band width in Objective-C 
+A kernel density estimation with automatic band width in Objective-C 
