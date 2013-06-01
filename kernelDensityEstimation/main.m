@@ -29,7 +29,7 @@ int main (int argc, const char * argv[])
                       ,[NSNumber numberWithDouble:1.1]
                       , nil];
         kernelDensityEstimation *de=[[kernelDensityEstimation alloc] initWithData:arr];
-        double y=[de porobabilityDensityFunction:1.3];
+        double y=[de porobabilityDensityFunction:1.4];
         NSLog(@"y^=%lf",y);
         
     }
